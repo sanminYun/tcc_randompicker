@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<!--<body class="text-center">-->
+<!--<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">-->
+<!--&lt;!&ndash; Just an image &ndash;&gt;-->
+<!--<nav class="navbar navbar-light bg-light navbar-expand-lg">-->
+<!--<a class="navbar-brand" href="#">-->
+<!--<img src="ITC_logo(new).png" height="40" alt="아이티씨교육 로고">-->
+<!--</a>-->
+<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--<div class="navbar-nav">-->
+<!--<a class="nav-item nav-link active" href="#">History <span class="sr-only">(current)</span></a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</nav>-->
+<!--&lt;!&ndash;[if lte IE 9]>-->
+<!--<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a-->
+<!--href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>-->
+<!--<![endif]&ndash;&gt;-->
+
+<!--&lt;!&ndash; Add your site or application content here &ndash;&gt;-->
+<!--&lt;!&ndash;<p>Hello world! This is HTML5 Boilerplate.</p>&ndash;&gt;-->
+<!--<section class="container-fluid">-->
+
+<!--<h1 class="display-2 text-center mt-5">2019 ITC 워크숍</h1>-->
+<!--<h1 class="display-4 text-center mt-5">TCC 심사위원 추첨</h1>-->
+<!--<button type="button" class="btn btn-outline-primary">Primary</button>-->
+<!--</section>-->
+
+
+<!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}"-->
+<!--crossorigin="anonymous"></script>-->
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>-->
+<!--<script src="js/plugins.js"></script>-->
+<!--<script src="js/main.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+<!--crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--crossorigin="anonymous"></script>-->
+
+<!--&lt;!&ndash; Google Analytics: change UA-XXXXX-Y to be your site's ID. &ndash;&gt;-->
+<!--<script>-->
+<!--window.ga = function () {-->
+<!--ga.q.push(arguments)-->
+<!--};-->
+<!--ga.q = [];-->
+<!--ga.l = +new Date;-->
+<!--ga('create', 'UA-XXXXX-Y', 'auto');-->
+<!--ga('send', 'pageview')-->
+<!--</script>-->
+<!--<script src="https://www.google-analytics.com/analytics.js" async defer></script>-->
+<!--</div>-->
+
+<!--</body>-->
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand"><img src="ITC_logo_no_padding.png" height="30" alt="로고" class="logo"/>ITC교육</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          History
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">History</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body result-text" id="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">결 과</h1>
+    <div class="jumbotron">
+      <h1 class="display-1 result-text" id="result-box">0</h1>
+
+    </div>
+
+
+      <button class="btn btn-lg btn-secondary" onClick="GetRandomNumber(10, 130)">랜덤 번호 뽑기</button>
+    </p>
+  </main>
+
+
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Copyright @  <a href="https://www.itcenglish.com/">(주)아이티씨교육 </a>, all right reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview');
+
+  // $('#myModal').on('shown.bs.modal', function () {
+  //   $('#myInput').trigger('focus')
+  // })
+
+
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
