@@ -1,8 +1,17 @@
 let results=[];
 
-const GetRandomNumber = (min, max) => {
+const GetRandomNumber = () => {
+  let min = $('#min').val();
+  let max = $('#max').val();
+  console.log(min + "," + max);
+
+  if(min < 0 || min === null || min === ""){min = 10}
+  if(max < 0 || max === null || max === ""){max = 130}
+  if(max <= min){alert("최대값이 최소값보다 작을 수 없습니다."); return;}
+  console.log("현재 범위:" +min + ", " + max);
+
   let result = 0;
-  let resultBox = document.getElementById("result-box");
+  //let resultBox = document.getElementById("result-box");
 
   while(result-1 < min){
 
@@ -11,19 +20,32 @@ const GetRandomNumber = (min, max) => {
   }
 
   GetHistory(result+1);
-  resultBox.innerText = ""+ (result+1);
+
+  $('.loader').removeClass("loader-hide").addClass("loader-show");
+  $('.result-text').text("");
+
+  setTimeout(function(){
+    $('.loader').removeClass("loader-show").addClass("loader-hide");
+    $('.result-text').text(""+(result+1));
+    let audio = new Audio('sound1_crop.mp3')
+    audio.play();
+  }, 1500);
   // return result + 1;
 };
 
 const GetHistory = (result) => {
   // results.push(`<li class="list-group-item">` + result + '</li>');
+
   results.push(result + ", ");
-  let historyModal = document.getElementById("modal-body");
+  console.log(results);
+  //let historyModal = document.getElementById("modal-body");
   let text ="";
 
   for(let i = 0 ; i < results.length; i++){
     text += results[i];
   }
-  historyModal.innerText = text;
+  //historyModal.innerText = text;
+  console.log(text);
+  $('.modal-body').text(text);
 };
 

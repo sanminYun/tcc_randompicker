@@ -86,6 +86,9 @@
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
           History
         </a>
+        <a class="nav-link" data-toggle="modal" data-target="#settingModal">
+          Setting
+        </a>
       </nav>
     </div>
   </header>
@@ -100,26 +103,66 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body result-text" id="modal-body">
+        <div class="modal-body" id="modal-body">
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="settingModalLabel">History</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body-2" id="modal-body-2">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default1">Min</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="min">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default2">Max</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="max">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+
     </div>
   </div>
 
 
+
   <main role="main" class="inner cover">
     <h1 class="cover-heading">결 과</h1>
-    <div class="jumbotron">
-      <h1 class="display-1 result-text" id="result-box">0</h1>
+    <div class="jumbotron result-container">
+      <div class="loader loader-hide mx-auto">
+        <span>Loading..</span>
+      </div>
+      <h1 class="result-text" id="result-box">
+
+      </h1>
 
     </div>
 
 
-      <button class="btn btn-lg btn-secondary" onClick="GetRandomNumber(10, 130)">랜덤 번호 뽑기</button>
+      <button class="btn btn-lg btn-secondary" onClick="GetRandomNumber()">랜덤 번호 뽑기</button>
     </p>
   </main>
 
