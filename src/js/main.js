@@ -5,29 +5,29 @@ const GetRandomNumber = () => {
   let max = $('#max').val();
   console.log(min + "," + max);
 
-  if(min < 0 || min === null || min === ""){min = 10}
-  if(max < 0 || max === null || max === ""){max = 130}
+  if(min < 0 || min === null || min === ""){min = 13}
+  if(max < 0 || max === null || max === ""){max = 133}
   if(max <= min){alert("최대값이 최소값보다 작을 수 없습니다."); return;}
   console.log("현재 범위:" +min + ", " + max);
 
   let result = 0;
   //let resultBox = document.getElementById("result-box");
 
-  while(result-1 < min){
 
-    result = Math.floor(Math.random() * max);
-    console.log("result is",result);
-  }
 
-  GetHistory(result+1);
+  result = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log("result is",result);
+
+
+  GetHistory(result);
 
   $('.loader').removeClass("loader-hide").addClass("loader-show");
   $('.result-text').text("");
 
   setTimeout(function(){
     $('.loader').removeClass("loader-show").addClass("loader-hide");
-    $('.result-text').text(""+(result+1));
-    let audio = new Audio('sound1_crop.mp3')
+    $('.result-text').text(""+(result));
+    let audio = new Audio('tada.wav')
     audio.play();
   }, 1500);
   // return result + 1;
